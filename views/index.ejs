@@ -12,14 +12,15 @@
         <input type="text" name="note" />
         <button type="submit">SEND</button>
     </form>
-
-    <ul>
-        <% for(let i=0; i < notes.length; i++){ %>
-            <li>
-                <%= notes[i].note %>
-            </li>
-        <% } %>
-    </ul>
+    <% if (notes) { %>
+        <ul>
+            <% for(let i=0; i < notes.length; i++){ %>
+                <li>
+                    <%= notes[i].note %>
+                </li>
+            <% } %>
+        </ul>
+    <% } %>
 
 </body>
 </html>
